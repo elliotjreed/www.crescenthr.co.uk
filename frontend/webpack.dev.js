@@ -10,7 +10,6 @@ module.exports = merge(commonConfig, {
   },
   devtool: "inline-source-map",
   entry: [
-    "react-hot-loader/patch",
     "webpack-dev-server/client?http://localhost:8081",
     "webpack/hot/only-dev-server",
     "./index.tsx"

@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
 
 import "./../assets/scss/App.scss";
@@ -21,10 +20,6 @@ export default class Contact extends React.Component<{}, IState> {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  public componentDidMount(): void {
-    ReactGA.pageview(window.location.pathname + location.search);
   }
 
   public render(): React.ReactNode {

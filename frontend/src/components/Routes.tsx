@@ -1,6 +1,4 @@
-import { createBrowserHistory } from "history";
 import * as React from "react";
-import * as ReactGA from "react-ga";
 import { Route, Router, Switch } from "react-router-dom";
 
 import "./../assets/scss/App.scss";
@@ -14,21 +12,11 @@ const Home = React.lazy(() => import(/* webpackChunkName: "home" */ "./Home"));
 const PageNotFound = React.lazy(() => import(/* webpackChunkName: "pagenotfound" */ "./PageNotFound"));
 const Sitemap = React.lazy(() => import(/* webpackChunkName: "sitemap" */ "./Sitemap"));
 
-const history = createBrowserHistory();
-history.listen(location => {
-  ReactGA.set({ page: location.pathname + location.search });
-  ReactGA.pageview(location.pathname + location.search);
-});
-
-
 export default class Routes extends React.Component<{}, {}> {
-  public componentDidMount(): void {
-    ReactGA.pageview(window.location.pathname + location.search);
-  }
 
   public render(): Router {
     return (
-      <Router history={history}>
+      <Router>
         <TopBar/>
         <React.Suspense fallback={<Spinner/>}>
           <Switch>
