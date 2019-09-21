@@ -1,0 +1,52 @@
+version: "3.6"
+
+services:
+  crescenthr-php:
+    image: elliotjreed/crescenthr-php
+    container_name: crescenthr-php
+    restart: always
+    networks:
+      - crescenthr
+
+  crescenthr-api-nginx:
+    image: elliotjreed/crescenthr-api-nginx
+    container_name: crescenthr-api-nginx
+    restart: always
+    networks:
+      - crescenthr
+      - web
+    depends_on:
+      - crescenthr-php
+    volumes:
+      - ./.env:/var/www/html/.env
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:api.crescenthr.co.uk"
+      - "traefik.protocol=h2c"
+      - "traefik.port=87"
+
+  crescenthr-nginx:
+    image: elliotjreed/crescenthr-nginx
+    container_name: crescenthr-nginx
+    restart: always
+    networks:
+      - crescenthr
+      - web
+    depends_on:
+      - crescenthr-php
+      - crescenthr-api-nginx
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:crescenthr.co.uk"
+      - "traefik.www.frontend.rule=Host:www.crescenthr.co.uk"
+      - "traefik.protocol=h2c"
+      - "traefik.port=86"
+
+networks:
+  web:
+    external: true
+  crescenthr:
+    name: crescenthr
+

@@ -1,0 +1,33 @@
+{
+    "name": "elliotjreed/crescenthr",
+    "description": "",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elliot J. Reed",
+            "email": "crescenthr@elliotjreed.com",
+            "homepage": "https://www.elliotjreed.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "phpmailer/phpmailer": "^6",
+        "vlucas/phpdotenv": "^3.6"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElliotJReed\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ElliotJReed\\Tests\\": "tests/"
+        }
+    }
+}

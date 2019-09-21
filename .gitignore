@@ -1,0 +1,6 @@
+.idea
+/frontend/dist
+/frontend/node_modules
+/api/vendor
+/api/invitations.sqlite3
+.env
