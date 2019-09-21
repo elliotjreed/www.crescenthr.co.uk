@@ -62,9 +62,10 @@ export default class Contact extends React.Component<{}, IState> {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="field">
-          <label className="label">Name</label>
+          <label htmlFor="name" className="label">Name</label>
           <div className="control">
             <input
+              id="name"
               className="input"
               type="text"
               placeholder="Name&hellip;"
@@ -74,9 +75,10 @@ export default class Contact extends React.Component<{}, IState> {
           </div>
         </div>
         <div className="field">
-          <label className="label">Email</label>
+          <label htmlFor="email" className="label">Email</label>
           <div className="control">
             <input
+              id="email"
               className="input"
               type="email"
               placeholder="Email address&hellip;"
@@ -86,9 +88,10 @@ export default class Contact extends React.Component<{}, IState> {
           </div>
         </div>
         <div className="field">
-          <label className="label">Telephone</label>
+          <label htmlFor="phone" className="label">Telephone</label>
           <div className="control">
             <input
+              id="phone"
               className="input"
               type="tel"
               placeholder="Telephone number &hellip;"
@@ -98,9 +101,10 @@ export default class Contact extends React.Component<{}, IState> {
           </div>
         </div>
         <div className="field">
-          <label className="label">Message</label>
+          <label htmlFor="message" className="label">Message</label>
           <div className="control">
             <textarea
+              id="message"
               className="textarea"
               placeholder="Enquiry&hellip;"
               name="message"
