@@ -26,7 +26,6 @@
     "lint:css": "stylelint './src/**/*.scss'"
   },
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
     "bulma": "^0",
     "history": "^4",
     "react": "^16",

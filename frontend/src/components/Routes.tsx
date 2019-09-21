@@ -1,3 +1,4 @@
+import { createBrowserHistory } from "history";
 import * as React from "react";
 import { Route, Router, Switch } from "react-router-dom";
 
@@ -12,11 +13,13 @@ const Home = React.lazy(() => import(/* webpackChunkName: "home" */ "./Home"));
 const PageNotFound = React.lazy(() => import(/* webpackChunkName: "pagenotfound" */ "./PageNotFound"));
 const Sitemap = React.lazy(() => import(/* webpackChunkName: "sitemap" */ "./Sitemap"));
 
+const history = createBrowserHistory();
+
 export default class Routes extends React.Component<{}, {}> {
 
   public render(): Router {
     return (
-      <Router>
+      <Router history={history}>
         <TopBar/>
         <React.Suspense fallback={<Spinner/>}>
           <Switch>

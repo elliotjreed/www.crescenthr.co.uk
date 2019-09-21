@@ -5,7 +5,7 @@ import "./assets/scss/App.scss";
 import App from "./components/App";
 
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+  window.addEventListener("load", (): void => {
     navigator.serviceWorker.register("/service-worker.js");
   });
 }

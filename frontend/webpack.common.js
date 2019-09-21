@@ -46,7 +46,7 @@ module.exports = {
         "removeScriptTypeAttributes": true
       },
       template: "./index.html",
-      title: "Elliot J. Reed"
+      title: "Crescent HR"
     })
   ],
   resolve: {

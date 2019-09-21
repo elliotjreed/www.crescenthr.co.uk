@@ -15,11 +15,7 @@ export default class Home extends React.Component<{}, {}> {
         <main className="main-content">
           <div className="section-dark resume">
             <div className="container">
-              <div
-                className="columns is-multiline"
-                data-aos="fade-in"
-                data-aos-easing="linear"
-              >
+              <div className="columns is-multiline">
                 <div className="column is-12 about-me">
                   <h2 className="title has-text-centered section-title">
                     Welcome to Crescent HR

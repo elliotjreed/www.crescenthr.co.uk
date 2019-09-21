@@ -27,10 +27,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "scripts",
-    "webpack",
-    "jest",
-    "tests/testSetup.js"
+    "scripts"
   ],
   "types": [
     "typePatches"
