@@ -1,6 +1,7 @@
 .idea
 /frontend/dist
 /frontend/node_modules
+/frontend/coverage
 /api/vendor
 /api/invitations.sqlite3
 .env

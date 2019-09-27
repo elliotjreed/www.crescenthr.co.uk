@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const PATHS = {
   src: join(__dirname, "src")
@@ -20,15 +21,13 @@ module.exports = merge(commonConfig, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }
     ]
   },
   optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
     splitChunks: {
       cacheGroups: {
         default: false,
@@ -77,9 +76,7 @@ module.exports = merge(commonConfig, {
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
       whitelist: ["pre", "code"]
     }),
-    new CopyPlugin([
-      { from: "./assets/static", to: "./" }
-    ]),
+    new CopyPlugin([{ from: "./assets/static", to: "./" }]),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true
