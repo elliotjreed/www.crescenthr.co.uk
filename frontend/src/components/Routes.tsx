@@ -25,7 +25,7 @@ const Routes = (): Router => {
           <Route exact={true} path="/about" component={About} />
           <Route exact={true} path="/contact" component={Contact} />
           <Route exact={true} path="/sitemap" component={Sitemap} />
-          <Route component={PageNotFound} status={404} />
+          <Route component={PageNotFound} />
         </Switch>
       </React.Suspense>
       <Footer />
