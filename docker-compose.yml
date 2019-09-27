@@ -7,6 +7,8 @@ services:
     restart: always
     networks:
       - crescenthr
+    volumes:
+      - ./.env:/var/www/html/.env
 
   crescenthr-api-nginx:
     image: elliotjreed/crescenthr-api-nginx
@@ -17,8 +19,6 @@ services:
       - web
     depends_on:
       - crescenthr-php
-    volumes:
-      - ./.env:/var/www/html/.env
     labels:
       - "traefik.docker.network=web"
       - "traefik.enable=true"

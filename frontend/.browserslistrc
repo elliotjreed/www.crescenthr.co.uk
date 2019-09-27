@@ -1,3 +1,10 @@
 last 2 versions
 > 1% in GB
-IE 11
+not ie < 11
+not ie_mob > 0
+not op_mob < 46
+not opera < 62
+not bb < 11
+not baidu > 0
+not kaios > 0
+not and_qq > 0
