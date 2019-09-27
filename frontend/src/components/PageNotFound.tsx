@@ -1,16 +1,21 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 
 import "./../assets/scss/App.scss";
 
-export default (): JSX.Element => {
+const PageNotFound = (): JSX.Element => {
   return (
-    <section className="hero is-info is-small is-bold">
-      <div className="hero-body">
-        <div className="container has-text-centered">
-          <h1 className="title">Unfortunately I can't find this page. Try <Link to="/">returning to the home page</Link> and going from there.</h1>
+    <main className="main-content">
+      <div className="section-dark resume">
+        <div className="container">
+          <div className="columns is-multiline">
+            <div className="column is-12 about-me">
+              <h2 className="title has-text-centered section-title">Page Not Found</h2>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
   );
-}
+};
+
+export default PageNotFound;

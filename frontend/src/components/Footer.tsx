@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default (): JSX.Element => {
+const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
@@ -10,4 +10,6 @@ export default (): JSX.Element => {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

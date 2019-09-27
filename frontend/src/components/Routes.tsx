@@ -15,20 +15,22 @@ const Sitemap = React.lazy((): Promise<any> => import(/* webpackChunkName: "site
 
 const history = createBrowserHistory();
 
-export default (): Router => {
+const Routes = (): Router => {
   return (
     <Router history={history}>
-      <TopBar/>
-      <React.Suspense fallback={<Spinner/>}>
+      <TopBar />
+      <React.Suspense fallback={<Spinner />}>
         <Switch>
-          <Route exact={true} path="/" component={Home}/>
-          <Route exact={true} path="/about" component={About}/>
-          <Route exact={true} path="/contact" component={Contact}/>
-          <Route exact={true} path="/sitemap" component={Sitemap}/>
-          <Route component={PageNotFound}/>
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/about" component={About} />
+          <Route exact={true} path="/contact" component={Contact} />
+          <Route exact={true} path="/sitemap" component={Sitemap} />
+          <Route component={PageNotFound} status={404} />
         </Switch>
       </React.Suspense>
-      <Footer/>
+      <Footer />
     </Router>
   );
-}
+};
+
+export default Routes;

@@ -2,11 +2,11 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default (): JSX.Element => {
+const TopBar = (): JSX.Element => {
   const [menuActive, toggleMenu] = useState(false);
 
   const menuClick = (): void => {
-    toggleMenu(!menuActive)
+    toggleMenu(!menuActive);
   };
 
   return (
@@ -14,10 +14,17 @@ export default (): JSX.Element => {
       <section className="hero">
         <nav className="navbar is-transparent is-hidden-desktop">
           <a className="navbar-brand">
-            <div data-target="mobile-nav" role="button" className={"navbar-burger burger navbar" + (menuActive ? " is-active" : "")} aria-label="menu" aria-expanded="false" onClick={menuClick}>
-              <span/>
-              <span/>
-              <span/>
+            <div
+              data-target="mobile-nav"
+              role="button"
+              className={"navbar-burger burger navbar" + (menuActive ? " is-active" : "")}
+              aria-label="menu"
+              aria-expanded="false"
+              onClick={menuClick}
+            >
+              <span />
+              <span />
+              <span />
             </div>
           </a>
           <div id="mobile-nav" className={"navbar-menu" + (menuActive ? " is-active" : "")}>
@@ -42,8 +49,11 @@ export default (): JSX.Element => {
         </nav>
         <div className="hero-body">
           <h1 className="image has-text-centered">
-            <img src="https://res.cloudinary.com/elliotjreed/image/upload/v1568570548/crescenthr/logo-banner.png"
-                 title="Crescent HR" alt="The logo for Crescent HR"/>
+            <img
+              src="https://res.cloudinary.com/elliotjreed/image/upload/v1568570548/crescenthr/logo-banner.png"
+              title="Crescent HR"
+              alt="The logo for Crescent HR"
+            />
           </h1>
         </div>
         <div className="hero-foot">
@@ -68,4 +78,6 @@ export default (): JSX.Element => {
       </section>
     </div>
   );
-}
+};
+
+export default TopBar;

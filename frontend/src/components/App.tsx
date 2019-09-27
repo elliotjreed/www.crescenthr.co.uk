@@ -3,10 +3,12 @@ import * as React from "react";
 import "./../assets/scss/App.scss";
 import Routes from "./Routes";
 
-export default (): JSX.Element => {
+const App = (): JSX.Element => {
   return (
     <>
-      <Routes/>
+      <Routes />
     </>
   );
 };
+
+export default App;
