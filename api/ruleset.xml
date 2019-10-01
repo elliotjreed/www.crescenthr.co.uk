@@ -61,7 +61,7 @@
     <rule ref="Squiz.PHP.DisallowSizeFunctionsInLoops"/>
     <rule ref="Squiz.PHP.DiscouragedFunctions">
         <properties>
-            <property name="error" value="true"/>
+            <property name="warning" value="true"/>
         </properties>
     </rule>
     <rule ref="Squiz.PHP.EmbeddedPhp"/>
