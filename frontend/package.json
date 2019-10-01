@@ -21,8 +21,8 @@
     "clean-dist": "rm -rf -d dist",
     "start": "webpack-dev-server --config=webpack.dev.js",
     "build": "yarn run clean-dist && webpack -p --config=webpack.prod.js",
-    "lint": "yarn run lint:ts && yarn run lint:css",
-    "lint:ts": "tslint './src/**/*.ts*' --format stylish --force",
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:js": "eslint --ext .ts --ext .js --ext .tsx './src/'",
     "lint:css": "stylelint './src/**/*.scss'",
     "test": "jest"
   },

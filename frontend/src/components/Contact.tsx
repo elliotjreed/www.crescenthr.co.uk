@@ -20,7 +20,7 @@ const Contact = (): JSX.Element => {
     event.preventDefault();
     setLoading(true);
     fetch("https://api.crescenthr.co.uk", {
-      body: new URLSearchParams(new FormData(event.target) as any),
+      body: new URLSearchParams(new FormData(event.target) as URLSearchParams),
       method: "POST"
     })
       .then((response: Response) => {
@@ -86,7 +86,7 @@ const Contact = (): JSX.Element => {
           Message
         </label>
         <div className="control">
-          <textarea id="message" className="textarea" placeholder="Enquiry&hellip;" name="message" disabled={loading} />
+          <textarea id="message" className="textarea" placeholder="Enquiry&hellip;" name="message" readOnly={loading} />
         </div>
       </div>
       <p className="label">Preferred contact method</p>
@@ -100,6 +100,7 @@ const Contact = (): JSX.Element => {
           </label>
         </div>
       </div>
+      {error === "" ? null : <div className="notification is-danger">{error}</div>}
       <div className="field">
         <div className="control ">
           <button className="button submit-button" disabled={loading}>

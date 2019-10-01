@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ElliotJReed\Tests;
@@ -54,7 +55,8 @@ final class ProcessFormTest extends TestCase
             'Phone: 0115 123 4567' . "\r\n" .
             'Preferred Contact Method: phone' . "\r\n\r\n" .
             'Hello I would like to contact you.',
-        $mailerSpy->AltBody);
+            $mailerSpy->AltBody
+        );
         $this->assertSame('', $mailerSpy->ErrorInfo);
     }
 

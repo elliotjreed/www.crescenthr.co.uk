@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ElliotJReed;
@@ -51,12 +52,20 @@ final class ProcessForm
 
     private function sanitiseEmail(?string $string): string
     {
-        return $this->sanitise(\htmlspecialchars($string ?: ''));
+        if ($string === null) {
+            return '';
+        }
+
+        return $this->sanitise(\htmlspecialchars($string));
     }
 
     private function sanitise(?string $string): string
     {
-        return \trim(\strip_tags($string ?: ''));
+        if ($string === null) {
+            return '';
+        }
+
+        return \trim(\strip_tags($string));
     }
 
     private function ensureRequiredDataIsPresent(array $formData): void
