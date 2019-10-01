@@ -69,17 +69,17 @@ html {
   padding-left: 15px;
 }
 
-.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li.is-active a {
-  border-bottom: 2px solid #43485c;
-}
-
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a {
   color: #43485c;
 }
 
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li.is-active a {
+  border-bottom: 2px solid #43485c;
+}
+
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a:hover {
   color: #1f2c6c;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-bottom: 2px solid #43485c;
 }
 
