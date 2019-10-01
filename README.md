@@ -1,10 +1,12 @@
+[![Build Status](https://travis-ci.org/elliotjreed/www.crescenthr.co.uk.svg?branch=master)](https://travis-ci.org/elliotjreed/www.crescenthr.co.uk)
+
 # Crescent HR
 
 The website source code for Crescent HR.
 
 ## PHP API Backend
 
-PHP 7.1 or above and Composer is expected to be installed on our system.
+PHP 7.3 or above and Composer is expected to be installed on our system.
 
 The backend API is located under the `./api` directory.
 
