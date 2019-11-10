@@ -48,7 +48,7 @@ const TopBar = (): JSX.Element => {
           </div>
         </nav>
         <div className="hero-body">
-          <h1 className="image has-text-centered">
+          <h1 className="has-text-centered">
             <img
               src="https://res.cloudinary.com/elliotjreed/image/upload/v1568570548/crescenthr/logo-banner.png"
               title="Crescent HR"

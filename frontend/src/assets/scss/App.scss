@@ -13,6 +13,7 @@ $primary: #c0e09f;
 @import "~bulma/sass/elements/title";
 @import "~bulma/sass/elements/tag";
 @import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/image";
 @import "~bulma/sass/components/card";
 @import "~bulma/sass/components/level";
 @import "~bulma/sass/components/modal";
@@ -87,6 +88,8 @@ html {
   color: #43485c;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .main-content .section-dark {

@@ -38,7 +38,7 @@ const Contact = (): JSX.Element => {
         }
         setLoading(true);
       })
-      .catch(() => setError("There was an error sending your email, please try again or contact us via"));
+      .catch(() => setError("There was an error sending your email, please try again."));
   };
 
   const renderForm: JSX.Element = (
