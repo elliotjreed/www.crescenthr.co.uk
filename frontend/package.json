@@ -23,7 +23,7 @@
     "build": "yarn run clean-dist && webpack -p --config=webpack.prod.js",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:js": "eslint --ext .ts --ext .js --ext .tsx './src/'",
-    "lint:css": "stylelint './src/**/*.scss'",
+    "lint:css": "stylelint './src/**/*.scss' --syntax scss",
     "test": "jest"
   },
   "dependencies": {
@@ -60,7 +60,7 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
-    "file-loader": "^4",
+    "file-loader": "^5",
     "html-webpack-plugin": "^3",
     "image-webpack-loader": "^6",
     "jest": "^24.9.0",
@@ -71,7 +71,7 @@
     "purgecss-webpack-plugin": "^1",
     "sass-loader": "^8",
     "style-loader": "^1",
-    "stylelint": "^11",
+    "stylelint": "^12",
     "stylelint-config-recommended-scss": "^4",
     "stylelint-config-standard": "^19",
     "stylelint-scss": "^3",
