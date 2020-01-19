@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 final class ProcessForm
 {
-    private $mailer;
+    private PHPMailer $mailer;
 
     public function __construct(PHPMailer $mailer)
     {

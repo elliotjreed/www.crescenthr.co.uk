@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 final class MailerSpy extends PHPMailer
 {
-    public $sendCalled = false;
-    public $throwException = false;
+    public bool $sendCalled = false;
+    public bool $throwException = false;
 
     public function send(): bool
     {
