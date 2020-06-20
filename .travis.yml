@@ -1,0 +1,26 @@
+matrix:
+  include:
+    - language: node_js
+      sudo: false
+      node_js: 12
+      install:
+        - cd frontend
+        - yarn install
+      script:
+        - yarn test
+        - yarn lint
+        - yarn build
+
+    - language: php
+      sudo: false
+      php: 7.4
+      directories:
+        - $HOME/.composer/cache/files
+      before_script:
+        - cd api
+        - composer install
+      script:
+        - vendor/bin/phpunit -c phpunit.xml --coverage-clover clover.xml
+        - vendor/bin/phpcs -q -n --colors --standard=ruleset.xml --runtime-set ignore_warnings_on_exit true
+      after_script:
+        - php vendor/bin/coveralls --coverage_clover=clover.xml -v
