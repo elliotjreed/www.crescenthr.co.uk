@@ -1,7 +1,1 @@
 .idea
-/frontend/dist
-/frontend/node_modules
-/frontend/coverage
-/api/vendor
-.env
-api/.phpunit.result.cache
