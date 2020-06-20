@@ -2,7 +2,7 @@ version: "3.6"
 
 services:
   crescenthr-nginx:
-    image: elliotjreed/crescenthr-nginx
+    image: elliotjreed/www.crescenthr.co.uk
     container_name: crescenthr-nginx
     restart: always
     networks:
